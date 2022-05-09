@@ -1,0 +1,330 @@
+<div class="news">
+    <style>
+        body{
+  margin: 0;
+  padding: 0;
+  background: #2d3436;
+}
+.middle{
+  position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.btn{
+  position: relative;
+  display: block;
+  color: rgb(5, 5, 5);
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btn1::before{
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before{
+  width: 100%;
+}
+
+
+.btn2::before{
+  width: 100%;
+  height: 0%;
+}
+.btn2:hover::before{
+  height: 100%;
+}
+
+.btn3::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn3:hover::before{
+  height: 380%;
+}
+
+.btn4::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.btn4:hover::before{
+  height: 380%;
+}
+
+    </style>
+    <div class="container">
+        <div class="row">
+
+            <!-- News Posts -->
+            <div class="col-lg-8">
+                <div class="news_posts">
+                    
+                    <!-- News Post -->
+                    <div class="news_post">
+                        <div class="news_post_image"><img src="assets/images/news_5.jpg" alt=""></div>
+                        <br>
+                        <div class="news_post_body">
+                            
+                            
+                            
+                            
+                            <div class="news_post_meta d-flex flex-row align-items-start justify-content-start">
+                                <br> <br>
+                                <div class="news_post_tags">
+                                    <div class="middle">
+                                        <a href="welcome" class="btn btn1">Start the quiz Now!</a></div>
+                                        
+                                </div>
+                               
+                                
+                            </div>
+                            <div class="news_post_meta d-flex flex-row align-items-start justify-content-start">
+                                <br> <br>
+                                <div class="news_post_tags">
+                                    <div class="middle">
+                                        <a href="mailings" class="btn btn1">Contact Former</a></div>
+                                        
+                                </div>
+                               
+                                
+                            </div>
+
+                            <div class="news_post_meta d-flex flex-row align-items-start justify-content-start">
+                                <br> <br>
+                                <div class="news_post_tags">
+                                    <div class="middle">
+                                        <a  href="mailings" (click)="makePDF()" class="btn btn1">Download This course</a></div>
+                                        
+                                </div>
+                                
+                                
+                                  <p>
+                                    {{ 'HELLO_WORLD' | translate }}
+                                  </p>
+                                  <p>{{ 'DOWNLOAD_THIS' | translate}} </p>
+                                
+                                
+                            </div>
+                            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+
+                            <div class="news_post_text">
+                                <select #locale (change)="changeLocale(locale.value)">
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="ar">Arabic</option>
+                                  </select>
+                                <p>{{ 'SUSPENDISSE TINCIDUNT MAGNA EGET MASSA HENDRERIT EFFICITUR' |translate}} </p>
+                            </div>
+                            <div class="news_post_link"><a href="#">Read More</a></div>
+                        </div>
+                    </div>
+
+                    <!-- News Post -->
+                    <div class="news_post">
+                        <div class="news_post_image"><img src="assets/images/news_6.jpg" alt=""></div>
+                        <div class="news_post_body">
+                            <div class="news_post_date"><a href="#">April 02, 2018</a></div>
+                            <div class="news_post_title"><a href="#">{{'Why choose an online course?'| translate}}</a></div>
+                            <div class="news_post_meta d-flex flex-row align-items-start justify-content-start">
+                                <div class="news_post_author">By <a href="#">William Smith</a></div>
+                                <div class="news_post_comments"><a href="#">3 Comments</a></div>
+                                <div class="news_post_tags">
+                                    <span>in </span>
+                                    <ul>
+                                        <li><a href="#">Social Media</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="news_post_text">
+                                <p>Suspendisse tincidunt magna eget massa hendrerit efficitur. Ut euismod pellentesque imperdiet. Cras laoreet gravida lectus, at viverra lorem venenatis in. Aenean id varius quam. Nullam bibendum interdum dui, ac tempor lorem convallis ut. Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar. Praesent vel nisl fermentum, gravida augue.</p>
+                            </div>
+                            <div class="news_post_link"><a href="#">Read More</a></div>
+                        </div>
+                    </div>
+
+                    <!-- News Post -->
+                    <div class="news_post">
+                        <div class="news_post_image"><img src="assets/images/news_7.jpg" alt=""></div>
+                        <div class="news_post_body">
+                            <div class="news_post_date"><a href="#">April 02, 2018</a></div>
+                            <div class="news_post_title"><a href="#">10 ways to get more productive</a></div>
+                            <div class="news_post_meta d-flex flex-row align-items-start justify-content-start">
+                                <div class="news_post_author">By <a href="#">William Smith</a></div>
+                                <div class="news_post_comments"><a href="#">3 Comments</a></div>
+                                <div class="news_post_tags">
+                                    <span>in </span>
+                                    <ul>
+                                        <li><a href="#">Social Media</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="news_post_text">
+                                <p>Suspendisse tincidunt magna eget massa hendrerit efficitur. Ut euismod pellentesque imperdiet. Cras laoreet gravida lectus, at viverra lorem venenatis in. Aenean id varius quam. Nullam bibendum interdum dui, ac tempor lorem convallis ut. Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar. Praesent vel nisl fermentum, gravida augue.</p>
+                            </div>
+                            <div class="news_post_link"><a href="#">Read More</a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar_search">
+                       
+                    </div>
+                   
+                    <div class="sidebar_latest_posts">
+                        
+                            <!-- News Post -->
+                            
+
+                            <!-- News Post -->
+                            
+
+                            <!-- News Post -->
+                           
+
+                            <!-- News Post -->
+                            
+                     
+                    <div class="sidebar_elearn">
+                        <div class="elearn">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        
+
+        <!-- Pagination -->
+        <div class="row">
+            <div class="col">
+                <div class="news_pagination">
+                    <ul>
+                        <li><a href="#">01</a></li>
+                        <li class="active"><a href="#">02</a></li>
+                        <li><a href="#">03</a></li>
+                        <li><a href="#">04</a></li>
+                        <li><a href="#">05</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-3 footer_col">
+                <div class="footer_about">
+                    <div class="logo_container">
+                        <a href="#">
+                            <div class="logo_content d-flex flex-row align-items-end justify-content-start">
+                                <div class="logo_img"><img src="assets/images/logo.png" alt=""></div>
+                                <div class="logo_text">learn</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer_about_text">
+                        <p>Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar.</p>
+                    </div>
+                    <div class="footer_social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 footer_col">
+                <div class="footer_links">
+                    <div class="footer_title">Quick menu</div>
+                    <ul class="footer_list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Facts</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 footer_col">
+                <div class="footer_links">
+                    <div class="footer_title">Useful Links</div>
+                    <ul class="footer_list">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="#">Teachers</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 footer_col">
+                <div class="footer_contact">
+                    <div class="footer_title">Contact Us</div>
+                    <div class="footer_contact_info">
+                        <div class="footer_contact_item">
+                            <div class="footer_contact_title">Address:</div>
+                            <div class="footer_contact_line">1481 Creekside Lane Avila Beach, CA 93424</div>
+                        </div>
+                        <div class="footer_contact_item">
+                            <div class="footer_contact_title">Phone:</div>
+                            <div class="footer_contact_line">+53 345 7953 32453</div>
+                        </div>
+                        <div class="footer_contact_item">
+                            <div class="footer_contact_title">Email:</div>
+                            <div class="footer_contact_line">yourmail@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

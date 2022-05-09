@@ -31,9 +31,25 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "styles/bootstrap4/bootstrap.min.css",
+              "plugins/font-awesome-4.7.0/css/font-awesome.min.css",
+              "styles/courses.css",
+              "styles/courses_responsive.css",
+              "styles/news.css",
+              "styles/news_responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "js/jquery-3.2.1.min.js",
+              "styles/bootstrap4/popper.js",
+              "styles/bootstrap4/bootstrap.min.js",
+              "plugins/easing/easing.js",
+              "plugins/parallax-js-master/parallax.min.js",
+              "js/courses.js",
+              "js/news.js"
+
+        
+            ]
           },
           "configurations": {
             "production": {
